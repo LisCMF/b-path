@@ -3,12 +3,11 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './client/index.js',// file to be render
   devServer: {
     static: {
       directory: path.join(__dirname), // root directory main path
     },
-
     compress: true,
     port: 8080,
     proxy: { '/api/leaders': 'http://localhost:3000/' },
