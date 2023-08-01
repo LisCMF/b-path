@@ -1,5 +1,3 @@
-// // add action type constants i.e.:
-// export const ACTION_DESCRIPTION = "ACTION_DESCRIPTION";
 
 /*
 Actions that modify the sate 
@@ -11,9 +9,10 @@ Actions that modify the sate
   - Delete a rate
 */
 
-export const SELECT_PATH_SEGMENT = 'RATE_SCENARY';
+// add action type constants i.e.:
+export const SELECT_PATH_SEGMENT = 'SELECT_PATH_SEGMENT';
 export const RATE_SCENARY = 'RATE_SCENARY';
-export const RATE_SAFETY = 'RATE_SCENARY';
-export const RATE_INFRASTRUCTURE = 'RATE_SCENARY';
-export const UPDATE_RATE = 'RATE_SCENARY';
-export const DELETE_RATE = 'RATE_SCENARY';
+export const RATE_SAFETY = 'RATE_SAFETY';
+export const RATE_INFRASTRUCTURE = 'RATE_INFRASTRUCTURE';
+export const UPDATE_RATE = 'UPDATE_RATE';
+export const DELETE_RATE = 'DELETE_RATE';

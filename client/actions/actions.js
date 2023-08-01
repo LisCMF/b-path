@@ -18,3 +18,41 @@ CREATE THE FOLOWING ACTIONS
 
 */
 
+import * as types from '../constants/actionsTypes';
+
+// import acction from actionsTypes 
+export const selectPathSegment = segmentNumber => ({ // check the data number
+  type: types.SELECT_PATH_SEGMENT,
+  payload: segmentNumber,
+})
+
+// types.RATE_SCENARY
+export const rateScenary = num => ({ // 1 to 5
+  type: types.RATE_SCENARY,
+  payload: num,
+})
+
+// types.RATE_SAFETY
+export const rateSafety = num => ({ // 1 to 5
+  type: types.RATE_SAFETY,
+  payload: num,
+})
+
+// types.RATE_INFRASTRUCTURE
+export const rateInfrastructure = num => ({ // 1 to 5
+  type: types.RATE_INFRASTRUCTURE,
+  payload: num,
+})
+
+// types.UPDATE_RATE
+export const updateRate = num => ({ // 1 to 5
+  type: types.UPDATE_RATE,
+  payload: num,
+})
+
+// types.DELETE_RATE
+export const deleteRate = num => ({ // 1 to 5
+  type: types.DELETE_RATE,
+  payload: num,
+})
+
