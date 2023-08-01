@@ -15,6 +15,10 @@ WEBPACK AND NPM INSTRUCTIONS
 
 After running `npm start` the server starts on port 3000, but the React app doesn't render anything. There are no tests for this unit; use whether or not your app is rendering to check if your build is working correctly.
 
+-------------------
 
+## TO SEE WEB APP IN http://localhost:8080/ 
+
+- Run `npm run dev` (don't run `npm start`)
 
 
