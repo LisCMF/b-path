@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import UserSafetyRate from '../components/UserSafetyRate.jsx';
+import UserSafetyRate from '../components/UserSafetyRate.jsx';
 
 const UserRateContainer = (prop) => {
   return(
     <div className='userRateContainer'>
-        {/* <UserSafetyRate/> */}
+        <UserSafetyRate/>
     </div>
   );
 }

@@ -13,7 +13,7 @@ const UserSafetyRate = prop => {
     // declare a constant dispatch
     const dispatch = useDispatch();
     // contain the result number after triger event
-    const individualScenaryRate = useSelector(state => state.markets.newLocation);
+    // const individualScenaryRate = useSelector(state => state.markets.newLocation);
     // for the segment selector // const handleChange = (e) => dispatch(newLoactionActionCreator(e.target.value));
     
     //function that dispatch an action
@@ -25,11 +25,12 @@ const UserSafetyRate = prop => {
 
     return(
         <div className='rate1to5'>
-            <button onClick={handleChange1}>1</button>
-            <button onClick={handleChange2}>2</button>
-            <button onClick={handleChange3}>3</button>
-            <button onClick={handleChange4}>4</button>
-            <button onClick={handleChange5}>5</button>
+            <div className='rateLabel'>Safety Rate</div>
+            <button className='rateButton' onClick={handleChange1}>1</button>
+            <button className='rateButton' onClick={handleChange2}>2</button>
+            <button className='rateButton' onClick={handleChange3}>3</button>
+            <button className='rateButton' onClick={handleChange4}>4</button>
+            <button className='rateButton'onClick={handleChange5}>5</button>
         </div>
     )
 }
