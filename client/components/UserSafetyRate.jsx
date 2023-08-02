@@ -17,15 +17,25 @@ const UserSafetyRate = prop => {
     // for the segment selector // const handleChange = (e) => dispatch(newLoactionActionCreator(e.target.value));
     
     //function that dispatch an action
-    const handleChange = (e) => dispatch(rateSafety(e));
+    const handleChange1 = (e) => dispatch(rateSafety(1));
+    const handleChange2 = (e) => dispatch(rateSafety(2));
+    const handleChange3 = (e) => dispatch(rateSafety(3));
+    const handleChange4 = (e) => dispatch(rateSafety(4));
+    const handleChange5 = (e) => dispatch(rateSafety(5));
 
     return(
         <div className='rate1to5'>
+            <button onClick={handleChange1}>1</button>
+            <button onClick={handleChange2}>2</button>
+            <button onClick={handleChange3}>3</button>
+            <button onClick={handleChange4}>4</button>
+            <button onClick={handleChange5}>5</button>
         </div>
     )
 }
 
 
+export default UserSafetyRate;
 /*
  const intialState = {
     individualScenaryRate : 0.00,
