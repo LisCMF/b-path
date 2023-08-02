@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 
 const UserRateContainer = (prop) => {
   return(
-    <div className='userRateContainer'></div>
+    <div className='userRateContainer'>
+        
+    </div>
   );
 }
 
