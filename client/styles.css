@@ -36,3 +36,27 @@ h1 {
     font-size: 0.5 rem;
 }
 
+.mapsOfTotalsContainer {
+    /* background-color: white; */
+    width: 90vw;
+    /* height:30vw; */
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem;
+}
+
+.userRateContainer {
+        background-color: rgba(0, 0, 0, 0.229);
+        width: 80vw;
+        height:30vw;
+        margin: 2rem auto;
+        /* display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center; */
+    
+}
+
