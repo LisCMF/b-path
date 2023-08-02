@@ -13,15 +13,14 @@ const UserSafetyRate = prop => {
     // declare a constant dispatch
     const dispatch = useDispatch();
     // contain the result number after triger event
-    // const individualScenaryRate = useSelector(state => state.markets.newLocation);
-    // for the segment selector // const handleChange = (e) => dispatch(newLoactionActionCreator(e.target.value));
+    const individualSafetyRate = useSelector(state => state.bpathReducer.individualSafetyRate); // select the element 
     
     //function that dispatch an action
-    const handleChange1 = (e) => dispatch(rateSafety(1));
-    const handleChange2 = (e) => dispatch(rateSafety(2));
-    const handleChange3 = (e) => dispatch(rateSafety(3));
-    const handleChange4 = (e) => dispatch(rateSafety(4));
-    const handleChange5 = (e) => dispatch(rateSafety(5));
+    const handleChange1 = () => dispatch(rateSafety(1));
+    const handleChange2 = () => dispatch(rateSafety(2));
+    const handleChange3 = () => dispatch(rateSafety(3));
+    const handleChange4 = () => dispatch(rateSafety(4));
+    const handleChange5 = () => dispatch(rateSafety(5));
 
     return(
         <div className='rate1to5'>
@@ -30,7 +29,8 @@ const UserSafetyRate = prop => {
             <button className='rateButton' onClick={handleChange2}>2</button>
             <button className='rateButton' onClick={handleChange3}>3</button>
             <button className='rateButton' onClick={handleChange4}>4</button>
-            <button className='rateButton'onClick={handleChange5}>5</button>
+            <button className='rateButton' onClick={handleChange5}>5</button>
+            <div className='rateLabel'>-{individualSafetyRate}-</div>
         </div>
     )
 }

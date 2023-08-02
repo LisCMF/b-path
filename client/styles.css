@@ -52,14 +52,13 @@ h1 {
 }
 
 .userRateContainer {
-        background-color: rgba(0, 0, 0, 0.229);
+        background-color: rgba(0, 0, 0, 0.1);
         width: 80vw;
         height:30vw;
         margin: 2rem auto;
-        /* display: flex;
         align-items: center;
-        justify-content: space-around;
-        text-align: center; */  
+        text-align: center;  
+        padding: 2rem;
 }
 
 .rate1to5 {
@@ -82,9 +81,28 @@ h1 {
     margin-top: 0.5rem;
 }
 
-
 .rateLabel {
     display: inline;
     margin: 1rem;
     text-align: center;
+}
+
+.selectSegmentDiv {
+    padding: 1rem;
+    padding-left: 0%;
+    justify-content: center;
+}
+
+.selectSegmentDiv input {
+    background-color: rgba(255, 255, 255, 0.255);
+    border: 1px solid rgba(0, 0, 0, 0.417);   
+    width: 8rem;
+    height: 2rem;
+}
+
+.selectSegmentDiv button {
+    background-color: rgba(255, 255, 255, 0.255);
+    border: 1px solid rgba(0, 0, 0, 0.417);    
+    width: 6rem;
+    height: 2rem;
 }

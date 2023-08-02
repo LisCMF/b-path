@@ -18,9 +18,14 @@ CREATE THE FOLOWING ACTIONS
 import * as types from '../constants/actionsTypes';
 
 // import acction from actionsTypes 
-export const selectPathSegment = segmentNumber => ({ // check the data number
+export const selectPathSegment = num6Dig => ({ // check the data number
   type: types.SELECT_PATH_SEGMENT,
-  payload: segmentNumber,
+  payload: num6Dig,
+})
+
+export const writePathSegment = num6Dig => ({ // check the data number
+  type: types.WRITE_PATH_SEGMENT,
+  payload: num6Dig,
 })
 
 // types.RATE_SCENARY

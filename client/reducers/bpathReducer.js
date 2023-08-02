@@ -8,31 +8,45 @@
     individualScenaryRate : 0.00,
     individualSafetyRate : 0.00,
     individualInfrastructureRate : 0.00,
-    curentSegmentNumber : null,
+    writeCurentSegmentNumber: "",
+    curentSegmentNumber : "",
     overallScenaryRate : 0.00,
     overallSafetyRate : 0.00,
     overallInfrastructureRate : 0.00,
   }
 
   const bpathReducer = (state = intialState, action) => {
-    
-    switch(action.type) {
+    let workingSegment;
 
+    switch(action.type) {
+      
       case types.SELECT_PATH_SEGMENT: {
+        workingSegment = state.writeCurentSegmentNumber;
         return {
           ...state,
+          writeCurentSegmentNumber: "",
+          curentSegmentNumber : workingSegment,
         }
       }
 
+      case types.WRITE_PATH_SEGMENT: {
+        return {
+          ...state,
+          writeCurentSegmentNumber : action.payload,
+        }
+      }
+      
       case types.RATE_SCENARY: {
         return {
           ...state,
+          individualScenaryRate : action.payload,
         }
       }
 
       case types.RATE_SAFETY: {
         return {
           ...state,
+          individualSafetyRate : action.payload,
         }
 
       }
@@ -40,6 +54,7 @@
       case types.RATE_INFRASTRUCTURE: {
         return {
           ...state,
+          individualInfrastructureRate : action.payload,
         }
       
       }

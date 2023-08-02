@@ -11,6 +11,7 @@ Actions that modify the sate
 
 // add action type constants i.e.:
 export const SELECT_PATH_SEGMENT = 'SELECT_PATH_SEGMENT';
+export const WRITE_PATH_SEGMENT = 'WRITE_PATH_SEGMENT';
 export const RATE_SCENARY = 'RATE_SCENARY';
 export const RATE_SAFETY = 'RATE_SAFETY';
 export const RATE_INFRASTRUCTURE = 'RATE_INFRASTRUCTURE';
