@@ -58,3 +58,8 @@ export const deleteRate = num => ({ // 1 to 5
   payload: num,
 })
 
+export const renderTotals = obj => ({ // 1 to 5
+  type: types.RENDER_TOTALS,
+  payload: obj,
+})
+

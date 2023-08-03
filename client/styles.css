@@ -42,7 +42,7 @@ h1 {
 
 .mapsOfTotalsContainer {
     /* background-color: white; */
-    width: 90vw;
+    width: 80vw;
     /* height:30vw; */
     margin: 2rem auto;
     display: flex;
@@ -60,15 +60,19 @@ h1 {
         align-items: center;
         text-align: center;  
         padding: 2rem;
+        align-content: center;
+        justify-content: center;
 }
 
 .rate1to5 {
     /* background-color: black; */
+
     width: 100%;
     height: 20%;
     display: flex;
+    justify-content: center;
     text-align: center;
-    
+    padding: 0.5rem;
 }
 
 .rateButton {
@@ -106,4 +110,32 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.417);    
     width: 6rem;
     height: 2rem;
+}
+
+.totalNumbersComponent{
+    /* background-color: aliceblue; */
+    
+}
+
+.totalNums{
+    color: greenyellow;
+    font-size: 4rem;
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 2rem;
+}
+
+.overallDataTable {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.overallButton {
+    /* width: 4rem; */
+    height: 2rem;
+    /* border-radius: 5%; */
+    margin: 5%;
+    border: 0 solid ;
+    background-color: rgba(0, 0, 0, 0.355);
+    color: whitesmoke;
+    margin-top: 0.5rem;
 }

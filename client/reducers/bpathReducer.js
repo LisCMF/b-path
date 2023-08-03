@@ -10,9 +10,10 @@
     individualInfrastructureRate : 0.00,
     writeCurentSegmentNumber: "",
     curentSegmentNumber : "",
-    overallScenaryRate : 0.00,
-    overallSafetyRate : 0.00,
-    overallInfrastructureRate : 0.00,
+    segmentsRated: "TBD 00",
+    overallScenaryRate : "TBD 00/05",
+    overallSafetyRate : "TBD 00/05",
+    overallInfrastructureRate : "TBD 00/05",
   }
 
   const bpathReducer = (state = intialState, action) => {
@@ -67,8 +68,20 @@
       case types.DELETE_RATE: {
         return {
           ...state,
+       
         }
       }
+      case types.RENDER_TOTALS: {
+        return {
+          ...state,
+          segmentsRated: action.payload.segmentsRated,
+          overallScenaryRate : action.payload.overallScenaryRate,
+          overallSafetyRate : action.payload.overallSafetyRate,
+          overallInfrastructureRate : action.payload.overallInfrastructureRate,
+        }
+      }
+
+      
     }
 
     return state;
