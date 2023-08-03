@@ -16,16 +16,15 @@
   }
 
   const bpathReducer = (state = intialState, action) => {
-    let workingSegment;
-
+    let segment;
     switch(action.type) {
       
       case types.SELECT_PATH_SEGMENT: {
-        workingSegment = state.writeCurentSegmentNumber;
+        segment =  state.writeCurentSegmentNumber
         return {
           ...state,
+          curentSegmentNumber : segment,
           writeCurentSegmentNumber: "",
-          curentSegmentNumber : workingSegment,
         }
       }
 

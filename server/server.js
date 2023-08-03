@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true })); // to research ????????????????
 app.use(express.json()); // ensure that we can use a body went doing post request
 
 const BpathController = require('./controllers/BpathController'); // with middleware to use as methods e.g. body parse
+const { connected } = require('process');
 
 const PORT = 3000; // backend port were poxy redirect requests
 
@@ -18,14 +19,14 @@ const uri = process.env.MONGODB_CONNECTION_STRING;
 mongoose.connect(uri, { 
     useNewUrlParser: true,
     useUnifiedTopology: true 
-}); // invoke the connect method to connect to the data base
+}).then(() => console.log('mongoose connected')).catch((err) => console.log(err)); // invoke the connect method to connect to the data base
 
 const connection = mongoose.connection;
 
 // create a bikePath segment in the db
 
-router.post('/addRate', BpathController.addRate, (req, res, next) => {
-  return res.status(200).json(res.locals.test);
+app.post('/api/addRate', BpathController.addRate, (req, res, next) => {
+  return res.status(200).json("test");
 });
 
 

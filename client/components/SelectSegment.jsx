@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // import all potential actions
@@ -26,24 +27,35 @@ const SelectSegment = (prop) => {
 
   // for the segment selector
   const handleChangeWrite = (e) => dispatch(writePathSegment(e.target.value));
-  const handleChangeSelect = (e) => { 
-    dispatch(selectPathSegment(e.target.value));
-    fetch("http://localhost:8080/addRate", {
+  const handleChangeSelect = (e) => dispatch(selectPathSegment(e.target.value));
+
+  // add a rate
+  //    const [addRate, setCustomers] = useState([]);
+   
+  const sendNewRate = () => {
+    return fetch("/api/addRate", {
       // check using something like this is it does not work  fetch('/api/leaders')
       method: "POST",
-      body: JSON.stringify({
-        segment: curentSegmentNumber,
-        scenaryRate: individualScenaryRate,
-        safetyRate: individualSafetyRate,
-        infrastructureRate: individualInfrastructureRate,
-        users: "Place holder",
-      }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        "segment": writeCurentSegmentNumber, // happens before than curentSegmentNumber
+        "scenaryRate": individualScenaryRate,
+        "safetyRate": individualSafetyRate,
+        "infrastructureRate": individualInfrastructureRate,
+        users: 'Place holder'
+      }),
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
+
+
+  const HandlerAndSend = async (e) => {
+    await handleChangeSelect(e);
+    await sendNewRate();
   };
 
   return (
@@ -56,7 +68,7 @@ const SelectSegment = (prop) => {
         onChange={handleChangeWrite}
         value={writeCurentSegmentNumber}
       ></input>
-      <button id="workOnSegmentButton" onClick={handleChangeSelect}>
+      <button id="workOnSegmentButton" onClick={HandlerAndSend}>
         select
       </button>
     </div>

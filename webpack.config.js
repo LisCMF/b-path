@@ -10,7 +10,7 @@ module.exports = {
     },
     compress: true,
     port: 8080,
-    proxy: { '/api/leaders': 'http://localhost:3000/' },
+    proxy: { '/api': 'http://localhost:3000' },
   },
   output: {
     path: path.resolve(__dirname, 'build'),
