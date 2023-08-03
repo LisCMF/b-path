@@ -119,7 +119,7 @@ const SelectSegment = (prop) => {
         value={writeCurentSegmentNumber}
       ></input>
       <button id="workOnSegmentButton" onClick={HandlerAndSend}>
-        select
+        add
       </button>
       <button id="workOnSegmentButton" onClick={HandlerAndUpdateRate}>
         update

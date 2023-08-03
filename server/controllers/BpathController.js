@@ -22,45 +22,44 @@ BpathController.addRate = async (req, res, next) => {
     return next();
 }
 
-
 BpathController.updateRate = async (req, res, next) => {
-    // console.log("addRate controler req.body ->", req.body);
-    // const {segment, scenaryRate, safetyRate, infrastructureRate, users} = req.body;
+    console.log("addRate controler req.body ->", req.body);
+    const {segment, scenaryRate, safetyRate, infrastructureRate, users} = req.body;
 
-    // const ratedPath = await Bikepath.create(
-    //     {
-    //         segment: segment,
-    //         scenaryRate : scenaryRate,
-    //         safetyRate : safetyRate,
-    //         infrastructureRate : infrastructureRate,
-    //         numberOfrates: 1,
-    //         arrOfUsers: [users]  
-    //     }
-    // );
+    const ratedPath = await Bikepath.updateOne(
+        {
+            segment: segment
+        }, 
+        {
+            scenaryRate : scenaryRate,
+            safetyRate : safetyRate,
+            infrastructureRate : infrastructureRate,
+            numberOfrates: 1,
+            arrOfUsers: [users]  
+        }
+    );
 
-    // await Bikepath.find({}).then((model) => console.log(model));
-    // res.locals.newPath = ratedPath;
-    // return next();
+    await Bikepath.find({}).then((model) => console.log(model));
+    res.locals.newPath = ratedPath;
+    return next();
 }
 
+//Model.findOneAndDelete()
+
+
 BpathController.deleteRate = async (req, res, next) => {
-    // console.log("addRate controler req.body ->", req.body);
-    // const {segment, scenaryRate, safetyRate, infrastructureRate, users} = req.body;
+    console.log("addRate controler req.body ->", req.body);
+    const {segment, scenaryRate, safetyRate, infrastructureRate, users} = req.body;
 
-    // const ratedPath = await Bikepath.create(
-    //     {
-    //         segment: segment,
-    //         scenaryRate : scenaryRate,
-    //         safetyRate : safetyRate,
-    //         infrastructureRate : infrastructureRate,
-    //         numberOfrates: 1,
-    //         arrOfUsers: [users]  
-    //     }
-    // );
+    const ratedPath = await Bikepath.findOneAndDelete(
+        {
+            segment: segment
+        }
+    );
 
-    // await Bikepath.find({}).then((model) => console.log(model));
-    // res.locals.newPath = ratedPath;
-    // return next();
+    await Bikepath.find({}).then((model) => console.log(model));
+    res.locals.newPath = ratedPath;
+    return next();
 }
 
 
