@@ -13,22 +13,28 @@ const BpathController = require('./controllers/BpathController'); // with middle
 const { connected } = require('process');
 
 const PORT = 3000; // backend port were poxy redirect requests
-
 const uri = process.env.MONGODB_CONNECTION_STRING;
+
 
 mongoose.connect(uri, { 
     useNewUrlParser: true,
     useUnifiedTopology: true 
-}).then(() => console.log('mongoose connected')).catch((err) => console.log(err)); // invoke the connect method to connect to the data base
+}).then(() => console.log('mongoose connected')).catch((err) => console.log('mongoose.connect or uri ->', err)); // invoke the connect method to connect to the data base
 
 const connection = mongoose.connection;
 
 // create a bikePath segment in the db
-
 app.post('/api/addRate', BpathController.addRate, (req, res, next) => {
-  return res.status(200).json("test");
+  return res.status(200).json(res.locals.newPath);
 });
 
+app.post('/api/updateRate', BpathController.updateRate, (req, res, next) => {
+  return res.status(200).json(res.locals.newPath);
+});
+
+app.post('/api/deleteRate', BpathController.deleteRate, (req, res, next) => {
+  return res.status(200).json(res.locals.newPath);
+});
 
 
 
@@ -45,28 +51,9 @@ const bikePathSchema = new Schema({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 connection.once('open', () => { //invoke the cb one time when the connection is made
   console.log('MongoDB database connected');
 });
-
-
-
-
-
-
 
 
 app.listen(PORT, () => console.log(`Server App Listening at http://localhost${PORT}`));

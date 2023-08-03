@@ -52,10 +52,60 @@ const SelectSegment = (prop) => {
       .then((data) => console.log(data));
   };
 
+  const updateRate = () => {
+    return fetch("/api/updateRate", {
+      // check using something like this is it does not work  fetch('/api/leaders')
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "segment": writeCurentSegmentNumber, // happens before than curentSegmentNumber
+        "scenaryRate": individualScenaryRate,
+        "safetyRate": individualSafetyRate,
+        "infrastructureRate": individualInfrastructureRate,
+        users: 'Place holder'
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
+  const deleteRate = () => {
+    return fetch("/api/deleteRate", {
+      // check using something like this is it does not work  fetch('/api/leaders')
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "segment": writeCurentSegmentNumber, // happens before than curentSegmentNumber
+        "scenaryRate": individualScenaryRate,
+        "safetyRate": individualSafetyRate,
+        "infrastructureRate": individualInfrastructureRate,
+        users: 'Place holder'
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
 
   const HandlerAndSend = async (e) => {
     await handleChangeSelect(e);
     await sendNewRate();
+  };
+
+  const HandlerAndUpdateRate = async (e) => {
+    await handleChangeSelect(e);
+    await updateRate();
+  };
+
+  const HandlerAndDeleteRate= async (e) => {
+    await handleChangeSelect(e);
+    await deleteRate();
   };
 
   return (
@@ -70,6 +120,12 @@ const SelectSegment = (prop) => {
       ></input>
       <button id="workOnSegmentButton" onClick={HandlerAndSend}>
         select
+      </button>
+      <button id="workOnSegmentButton" onClick={HandlerAndUpdateRate}>
+        update
+      </button>
+      <button id="workOnSegmentButton" onClick={HandlerAndDeleteRate}>
+        delete
       </button>
     </div>
   );

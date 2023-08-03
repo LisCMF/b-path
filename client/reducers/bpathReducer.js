@@ -61,8 +61,7 @@
       case types.UPDATE_RATE: {
         return {
           ...state,
-        }
-      
+        }      
       }
 
       case types.DELETE_RATE: {

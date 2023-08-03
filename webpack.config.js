@@ -10,7 +10,11 @@ module.exports = {
     },
     compress: true,
     port: 8080,
-    proxy: { '/api': 'http://localhost:3000' },
+    proxy: { 
+      '/api': 'http://localhost:3000',
+      secure: false, // added to connect to data
+      changeOrigin: true, // added to connect to data
+    },
   },
   output: {
     path: path.resolve(__dirname, 'build'),

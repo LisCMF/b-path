@@ -13,7 +13,7 @@ const bikePathSchema = new Schema({
 });
 
 // create our model
-const BikePath = mongoose.model('bikepath', bikePathSchema);
+const Bikepath = mongoose.model('bikepath', bikePathSchema);
 
 // export model through module.exports
-module.exports = BikePath;
+module.exports = Bikepath;
