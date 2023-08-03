@@ -25,7 +25,8 @@ const UserScenaryRate = prop => {
 
     return(
         <div className='rate1to5'>
-            <div className='rateLabel'>Scenary Rate</div>
+            
+            <div className='rateLabel'>Scenery Rate</div>
             <button className='rateButton' onClick={handleChange1}>1</button>
             <button className='rateButton' onClick={handleChange2}>2</button>
             <button className='rateButton' onClick={handleChange3}>3</button>

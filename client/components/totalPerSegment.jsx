@@ -54,14 +54,14 @@ const TotalPerSegment = prop => {
     return(
         <div className='totalNumbersComponent'>
             <div className='totalNums'>{segmentsRated} SEGMENTS</div>
-            <div className='overallDataTable'>bike path segments rated !</div>
+            <div className='overallDataTable'>bike path segments rated!</div>
             <div className='totalNums'>{overallSafetyRate}/5</div>
-            <div className='overallDataTable'>overall bike path SAFETY Rate in search area</div>
+            <div className='overallDataTable'>overall bike path SAFETY Rate in the search area</div>
             <div className='totalNums'>{overallScenaryRate}/5</div>
-            <div className='overallDataTable'>overall bike path SCENARY Rate in search area</div>
+            <div className='overallDataTable'>overall bike path SCENARY Rate in the search area</div>
             <div className='totalNums'>{overallInfrastructureRate}/5</div>
-            <div className='overallDataTable'>overall bike path INFRASTRUCTURE Rate in search area</div>
-            <button className='overallButton' onClick={HandlerAndNewOverallSum}>summary of rates in search area</button>
+            <div className='overallDataTable'>overall bike path INFRASTRUCTURE Rate in the search area</div>
+            <button className='overallButton' onClick={HandlerAndNewOverallSum}>summary in the search area</button>
         </div>
     )
 }
