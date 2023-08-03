@@ -44,7 +44,6 @@ BpathController.updateRate = async (req, res, next) => {
     return next();
 }
 
-//Model.findOneAndDelete()
 
 
 BpathController.deleteRate = async (req, res, next) => {
