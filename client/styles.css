@@ -3,6 +3,7 @@ body {
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
+    /* padding: 10%; */
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 
 .imageContainer {
     /* background-color: white; */
-    width: 90vw;
+    width: 80vw;
     height:30vw;
     margin: 0 auto;
     display: flex;
@@ -26,8 +27,8 @@ h1 {
 }
 
 .infoImage {
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 100%;
 
 }
@@ -53,7 +54,7 @@ h1 {
 
 .userRateContainer {
         background-color: rgba(0, 0, 0, 0.1);
-        width: 80vw;
+        width: 65vw;
         height:20vw;
         margin: 2rem auto;
         align-items: center;
