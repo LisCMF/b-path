@@ -10,10 +10,10 @@
     individualInfrastructureRate : 0.00,
     writeCurentSegmentNumber: "",
     curentSegmentNumber : "",
-    segmentsRated: "TBD 00",
-    overallScenaryRate : "TBD 00/05",
-    overallSafetyRate : "TBD 00/05",
-    overallInfrastructureRate : "TBD 00/05",
+    segmentsRated: "TBD",
+    overallScenaryRate : "TBD",
+    overallSafetyRate : "TBD",
+    overallInfrastructureRate : "TBD",
   }
 
   const bpathReducer = (state = intialState, action) => {
