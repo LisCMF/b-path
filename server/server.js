@@ -36,11 +36,9 @@ app.post('/api/deleteRate', BpathController.deleteRate, (req, res, next) => {
   return res.status(200).json(res.locals.newPath);
 });
 
-
 app.post('/api/sumary', BpathController.sumary, (req, res, next) => {
     return res.status(200).json(res.locals.sumObj);
-  });
-
+});
 
 /* set a person schema
 const bikePathSchema = new Schema({
@@ -61,3 +59,7 @@ connection.once('open', () => { //invoke the cb one time when the connection is 
 
 
 app.listen(PORT, () => console.log(`Server App Listening at http://localhost${PORT}`));
+
+
+
+

@@ -24,8 +24,7 @@ const UserScenaryRate = prop => {
     const handleChange5 = () => dispatch(rateScenary(5));
 
     return(
-        <div className='rate1to5'>
-            
+        <div className='rate1to5'>            
             <div className='rateLabel'>Scenery Rate</div>
             <button className='rateButton' onClick={handleChange1}>1</button>
             <button className='rateButton' onClick={handleChange2}>2</button>
